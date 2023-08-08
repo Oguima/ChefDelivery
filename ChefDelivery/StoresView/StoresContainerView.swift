@@ -28,6 +28,15 @@ struct StoresContainerView: View {
                 Spacer()
                 
                 Menu("Filtrar") {
+                    
+                    Button {
+                        ratingFilter = 0 //Todos
+                    } label: {
+                        Text("Limpar filtro")
+                    }
+                    
+                    Divider()
+                    
                     ForEach(1...5, id: \.self) { rating in
                         Button {
                             ratingFilter = rating

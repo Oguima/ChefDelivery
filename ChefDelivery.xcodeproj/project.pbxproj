@@ -11,6 +11,7 @@
 		014A9CFE2A81BFFF00B7B9CB /* StoreType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014A9CFD2A81BFFF00B7B9CB /* StoreType.swift */; };
 		014A9D002A81C05000B7B9CB /* ProductType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014A9CFF2A81C05000B7B9CB /* ProductType.swift */; };
 		014A9D032A81C90F00B7B9CB /* Double+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014A9D022A81C90F00B7B9CB /* Double+.swift */; };
+		014A9D062A82F60000B7B9CB /* ProductDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014A9D052A82F60000B7B9CB /* ProductDetailView.swift */; };
 		01DF5FA12A7C6BCD00E4620E /* ChefDeliveryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DF5FA02A7C6BCD00E4620E /* ChefDeliveryApp.swift */; };
 		01DF5FA32A7C6BCD00E4620E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DF5FA22A7C6BCD00E4620E /* ContentView.swift */; };
 		01DF5FA52A7C6BCF00E4620E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01DF5FA42A7C6BCF00E4620E /* Assets.xcassets */; };
@@ -51,6 +52,7 @@
 		014A9CFD2A81BFFF00B7B9CB /* StoreType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreType.swift; sourceTree = "<group>"; };
 		014A9CFF2A81C05000B7B9CB /* ProductType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductType.swift; sourceTree = "<group>"; };
 		014A9D022A81C90F00B7B9CB /* Double+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+.swift"; sourceTree = "<group>"; };
+		014A9D052A82F60000B7B9CB /* ProductDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailView.swift; sourceTree = "<group>"; };
 		01DF5F9D2A7C6BCD00E4620E /* ChefDelivery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChefDelivery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01DF5FA02A7C6BCD00E4620E /* ChefDeliveryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChefDeliveryApp.swift; sourceTree = "<group>"; };
 		01DF5FA22A7C6BCD00E4620E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -106,6 +108,14 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		014A9D042A82F5EA00B7B9CB /* ProductView */ = {
+			isa = PBXGroup;
+			children = (
+				014A9D052A82F60000B7B9CB /* ProductDetailView.swift */,
+			);
+			path = ProductView;
+			sourceTree = "<group>";
+		};
 		01DF5F942A7C6BCC00E4620E = {
 			isa = PBXGroup;
 			children = (
@@ -129,6 +139,7 @@
 		01DF5F9F2A7C6BCD00E4620E /* ChefDelivery */ = {
 			isa = PBXGroup;
 			children = (
+				014A9D042A82F5EA00B7B9CB /* ProductView */,
 				014A9D012A81C8F000B7B9CB /* Extension */,
 				01DF5FCC2A7C6EE300E4620E /* App */,
 				01DF5FD22A7C780000E4620E /* Model */,
@@ -355,6 +366,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				01DF5FD42A7C782E00E4620E /* OrderType.swift in Sources */,
+				014A9D062A82F60000B7B9CB /* ProductDetailView.swift in Sources */,
 				014A9D002A81C05000B7B9CB /* ProductType.swift in Sources */,
 				01DF5FDB2A7C7FC400E4620E /* CarouselItemView.swift in Sources */,
 				01DF5FA32A7C6BCD00E4620E /* ContentView.swift in Sources */,

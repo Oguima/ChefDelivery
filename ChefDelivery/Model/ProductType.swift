@@ -13,4 +13,10 @@ struct ProductType: Identifiable {
     let description: String
     let image: String
     let price: Double
+    
+    //propriedade computada... precisa ser var
+    var formatedPrice: String {
+        return "R$" + price.formatPrice()
+    }
+    
 }

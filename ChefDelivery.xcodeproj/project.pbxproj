@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		014A9CFC2A81BB0600B7B9CB /* StoreDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014A9CFB2A81BB0600B7B9CB /* StoreDetailView.swift */; };
+		014A9CFE2A81BFFF00B7B9CB /* StoreType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014A9CFD2A81BFFF00B7B9CB /* StoreType.swift */; };
+		014A9D002A81C05000B7B9CB /* ProductType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014A9CFF2A81C05000B7B9CB /* ProductType.swift */; };
 		01DF5FA12A7C6BCD00E4620E /* ChefDeliveryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DF5FA02A7C6BCD00E4620E /* ChefDeliveryApp.swift */; };
 		01DF5FA32A7C6BCD00E4620E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DF5FA22A7C6BCD00E4620E /* ContentView.swift */; };
 		01DF5FA52A7C6BCF00E4620E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01DF5FA42A7C6BCF00E4620E /* Assets.xcassets */; };
@@ -45,6 +47,8 @@
 
 /* Begin PBXFileReference section */
 		014A9CFB2A81BB0600B7B9CB /* StoreDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreDetailView.swift; sourceTree = "<group>"; };
+		014A9CFD2A81BFFF00B7B9CB /* StoreType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreType.swift; sourceTree = "<group>"; };
+		014A9CFF2A81C05000B7B9CB /* ProductType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductType.swift; sourceTree = "<group>"; };
 		01DF5F9D2A7C6BCD00E4620E /* ChefDelivery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChefDelivery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01DF5FA02A7C6BCD00E4620E /* ChefDeliveryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChefDeliveryApp.swift; sourceTree = "<group>"; };
 		01DF5FA22A7C6BCD00E4620E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -184,6 +188,8 @@
 			children = (
 				01DF5FD32A7C782E00E4620E /* OrderType.swift */,
 				01DF5FD52A7C78E100E4620E /* DataSourceMock.swift */,
+				014A9CFD2A81BFFF00B7B9CB /* StoreType.swift */,
+				014A9CFF2A81C05000B7B9CB /* ProductType.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -338,6 +344,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				01DF5FD42A7C782E00E4620E /* OrderType.swift in Sources */,
+				014A9D002A81C05000B7B9CB /* ProductType.swift in Sources */,
 				01DF5FDB2A7C7FC400E4620E /* CarouselItemView.swift in Sources */,
 				01DF5FA32A7C6BCD00E4620E /* ContentView.swift in Sources */,
 				01DF5FD62A7C78E100E4620E /* DataSourceMock.swift in Sources */,
@@ -348,6 +355,7 @@
 				01DF5FD12A7C749200E4620E /* OrderTypeGridView.swift in Sources */,
 				01DF5FDD2A7C818800E4620E /* CarouselTabView.swift in Sources */,
 				01DF5FA12A7C6BCD00E4620E /* ChefDeliveryApp.swift in Sources */,
+				014A9CFE2A81BFFF00B7B9CB /* StoreType.swift in Sources */,
 				01DF5FCE2A7C6F1E00E4620E /* NavigationBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

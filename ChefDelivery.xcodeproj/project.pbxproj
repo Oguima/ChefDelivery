@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		014A9CFC2A81BB0600B7B9CB /* StoreDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014A9CFB2A81BB0600B7B9CB /* StoreDetailView.swift */; };
 		01DF5FA12A7C6BCD00E4620E /* ChefDeliveryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DF5FA02A7C6BCD00E4620E /* ChefDeliveryApp.swift */; };
 		01DF5FA32A7C6BCD00E4620E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DF5FA22A7C6BCD00E4620E /* ContentView.swift */; };
 		01DF5FA52A7C6BCF00E4620E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01DF5FA42A7C6BCF00E4620E /* Assets.xcassets */; };
@@ -43,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		014A9CFB2A81BB0600B7B9CB /* StoreDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreDetailView.swift; sourceTree = "<group>"; };
 		01DF5F9D2A7C6BCD00E4620E /* ChefDelivery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChefDelivery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01DF5FA02A7C6BCD00E4620E /* ChefDeliveryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChefDeliveryApp.swift; sourceTree = "<group>"; };
 		01DF5FA22A7C6BCD00E4620E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -200,6 +202,7 @@
 			children = (
 				01DF5FDF2A7C846100E4620E /* StoreItemView.swift */,
 				01DF5FE12A7C85FF00E4620E /* StoresContainerView.swift */,
+				014A9CFB2A81BB0600B7B9CB /* StoreDetailView.swift */,
 			);
 			path = StoresView;
 			sourceTree = "<group>";
@@ -341,6 +344,7 @@
 				01DF5FE22A7C85FF00E4620E /* StoresContainerView.swift in Sources */,
 				01DF5FD82A7C7A6900E4620E /* OrderTypeView.swift in Sources */,
 				01DF5FE02A7C846100E4620E /* StoreItemView.swift in Sources */,
+				014A9CFC2A81BB0600B7B9CB /* StoreDetailView.swift in Sources */,
 				01DF5FD12A7C749200E4620E /* OrderTypeGridView.swift in Sources */,
 				01DF5FDD2A7C818800E4620E /* CarouselTabView.swift in Sources */,
 				01DF5FA12A7C6BCD00E4620E /* ChefDeliveryApp.swift in Sources */,

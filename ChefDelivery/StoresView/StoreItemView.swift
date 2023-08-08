@@ -26,9 +26,10 @@ struct StoreItemView: View {
             
             Spacer() //Ocupa espaço disponivel...
         }
-        .onTapGesture {
+        //O onTap bloqueou a navegação do navigationLink...
+        /*.onTapGesture {
             print("Clicou em \(order.name)")
-        }
+        }*/
     }
 }
 

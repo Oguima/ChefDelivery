@@ -10,6 +10,7 @@ import SwiftUI
 struct ProductDetailView: View {
     
     let product: ProductType
+    @State private var productQuantity = 1 //comportamento private ...
     
     var body: some View {
         VStack {
@@ -31,6 +32,42 @@ struct ProductDetailView: View {
                     .font(.title3)
                     .bold()
                     .padding(.horizontal)
+            }
+            
+            Spacer()
+            
+            VStack (spacing: 16) {
+                Text("Quantidade")
+                    .bold()
+                    .font(.title3)
+                
+                HStack {
+                    Button {
+                        //print ("desce")
+                        if (productQuantity > 1) {
+                            productQuantity -= 1
+                        }
+                    } label: {
+                        Image(systemName: "minus.circle.fill")
+                            .font(.title)
+                            .bold()
+                    }
+                    
+                    //Para alterar este texto... @state.
+                    //view vai recarregar
+                    Text("\(productQuantity)")
+                        .font(.title2)
+                        .bold()
+                    
+                    Button {
+                        //print ("Sobe")
+                        productQuantity += 1
+                    } label: {
+                        Image(systemName: "plus.circle.fill")
+                            .font(.title)
+                            .bold()
+                    }
+                }
             }
             
             Spacer()

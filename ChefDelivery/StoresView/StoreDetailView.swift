@@ -101,7 +101,7 @@ struct StoreDetailView: View {
             .toolbar { //Customizando
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button {
-                        //Voltar para tela anterior...
+                        //TODO: Voltar para tela anterior... (Verificar)
                         presentationMode.wrappedValue.dismiss() //Volta para anterior...
                     } label: {
                         HStack (spacing: 4) {

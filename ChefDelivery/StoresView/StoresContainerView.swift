@@ -11,6 +11,13 @@ struct StoresContainerView: View {
     let title = "Lojas"
     @State private var ratingFilter = 0
     
+    var filteredStores: [StoreType] {
+        //propriedade Computada... alterado toda vez que acessado
+        return storesMock.filter { store in
+            store.stars >= ratingFilter
+        }
+    }
+    
     var body: some View {
         VStack (alignment: .leading) {
             
@@ -21,12 +28,6 @@ struct StoresContainerView: View {
                 Spacer()
                 
                 Menu("Filtrar") {
-                    /*Text("1 estrela ou mais")
-                    Text("2 estrelas ou mais")
-                    Text("3 estrelas ou mais")
-                    Text("4 estrelas ou mais")
-                    Text("5 estrelas ou mais")*/
-                    
                     ForEach(1...5, id: \.self) { rating in
                         Button {
                             ratingFilter = rating
@@ -43,7 +44,7 @@ struct StoresContainerView: View {
             }
             
             VStack(alignment: .leading, spacing: 30) {
-                ForEach(storesMock) { mock in
+                ForEach(filteredStores) { mock in
                     //Cria o link para transicao de telas...
                     NavigationLink{
                         StoreDetailView(store: mock)

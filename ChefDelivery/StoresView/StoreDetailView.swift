@@ -13,6 +13,7 @@ struct StoreDetailView: View {
     //Propriedade com infos do ambiente em que a view esta sendo exibida.
     //presentationMode, modo de apresentacao
     @Environment(\.presentationMode) var presentationMode
+    @State private var selectedProduct: ProductType?
     
     var body: some View {
         ScrollView (showsIndicators: false) {
@@ -52,8 +53,15 @@ struct StoreDetailView: View {
                 
                 ForEach(store.products) { product in
                     
-                    NavigationLink {
+                    /*NavigationLink {
                         ProductDetailView(product: product)
+                    } label: {
+                        
+                    }*/
+                    
+                    Button {
+                        //
+                        selectedProduct = product
                     } label: {
                         HStack(spacing: 8) {
                             VStack (alignment: .leading, spacing: 8) {
@@ -78,8 +86,11 @@ struct StoreDetailView: View {
                         }
                         .padding()
                         .foregroundColor(.black)
-                        
-                        
+                    }
+                    //Para abir como modal
+                    //$ binding, ligacao... passando variavel de estado como paramentro.
+                    .sheet(item: $selectedProduct) { product in
+                        ProductDetailView(product: product)
                     }
                 }
             }

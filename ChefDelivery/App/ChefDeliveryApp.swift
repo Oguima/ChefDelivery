@@ -11,7 +11,8 @@ import SwiftUI
 struct ChefDeliveryApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            //ContentView()
+            HomeView()
         }
     }
 }

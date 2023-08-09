@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		010E0BE92A83D59E00798FCC /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010E0BE82A83D59E00798FCC /* HomeView.swift */; };
 		014A9CFC2A81BB0600B7B9CB /* StoreDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014A9CFB2A81BB0600B7B9CB /* StoreDetailView.swift */; };
 		014A9CFE2A81BFFF00B7B9CB /* StoreType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014A9CFD2A81BFFF00B7B9CB /* StoreType.swift */; };
 		014A9D002A81C05000B7B9CB /* ProductType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014A9CFF2A81C05000B7B9CB /* ProductType.swift */; };
@@ -53,6 +54,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		010E0BE82A83D59E00798FCC /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		014A9CFB2A81BB0600B7B9CB /* StoreDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreDetailView.swift; sourceTree = "<group>"; };
 		014A9CFD2A81BFFF00B7B9CB /* StoreType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreType.swift; sourceTree = "<group>"; };
 		014A9CFF2A81C05000B7B9CB /* ProductType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductType.swift; sourceTree = "<group>"; };
@@ -110,12 +112,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		014A9D012A81C8F000B7B9CB /* Extension */ = {
+		010E0BE72A83D57B00798FCC /* HomeView */ = {
+			isa = PBXGroup;
+			children = (
+				010E0BE82A83D59E00798FCC /* HomeView.swift */,
+			);
+			path = HomeView;
+			sourceTree = "<group>";
+		};
+		014A9D012A81C8F000B7B9CB /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				014A9D022A81C90F00B7B9CB /* Double+.swift */,
 			);
-			path = Extension;
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		014A9D042A82F5EA00B7B9CB /* ProductView */ = {
@@ -162,7 +172,8 @@
 		01DF5F9F2A7C6BCD00E4620E /* ChefDelivery */ = {
 			isa = PBXGroup;
 			children = (
-				014A9D012A81C8F000B7B9CB /* Extension */,
+				010E0BE72A83D57B00798FCC /* HomeView */,
+				014A9D012A81C8F000B7B9CB /* Extensions */,
 				01DF5FCC2A7C6EE300E4620E /* App */,
 				01DF5FD22A7C780000E4620E /* Model */,
 				01DF5FCB2A7C6EC900E4620E /* NavigationBar */,
@@ -393,6 +404,7 @@
 				014A9D092A830A5800B7B9CB /* StoreDetailHeader.swift in Sources */,
 				014A9D062A82F60000B7B9CB /* ProductDetailView.swift in Sources */,
 				014A9D002A81C05000B7B9CB /* ProductType.swift in Sources */,
+				010E0BE92A83D59E00798FCC /* HomeView.swift in Sources */,
 				01DF5FDB2A7C7FC400E4620E /* CarouselItemView.swift in Sources */,
 				014A9D122A830E8B00B7B9CB /* ProductDetailQuantityView.swift in Sources */,
 				01DF5FA32A7C6BCD00E4620E /* ContentView.swift in Sources */,

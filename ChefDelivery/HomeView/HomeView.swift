@@ -11,11 +11,16 @@ struct HomeView: View {
     
     @State private var isAnimating = false
     @State private var imageOffset: CGSize = .zero //deslocamento da imagem
+    @State private var buttonOffset: CGFloat = 0.0 //para o Drag
+    @State private var showSecondScreen = false //Se a segunda tela deve ser mostrada
+    
+    let buttonHeight: CGFloat = 80.0 //Altura botão
+    
     
     var body: some View {
         GeometryReader { geometry in
             ZStack {
-
+                
                 //Fica atraz na ZStack
                 Circle()
                     .foregroundColor(Color("ColorRed"))
@@ -37,7 +42,7 @@ struct HomeView: View {
                 
                 VStack {
                     Text("Chef Delivery")
-                        .font(.system(size: 40))
+                        .font(.system(size: 48))
                         .fontWeight(.heavy)
                         .foregroundColor(Color("ColorRed"))
                         .opacity(isAnimating ? 1: 0)
@@ -74,12 +79,98 @@ struct HomeView: View {
                                     }
                                 })
                         )
+                    
+                    //Botão:
+                    ZStack {
+                        Capsule()
+                            .fill(Color("ColorRed").opacity(0.2))
+                        
+                        //Bordinha
+                        Capsule()
+                            .fill(Color("ColorRed").opacity(0.2))
+                            .padding(8)
+                        
+                        Text("Descubra mais")
+                            .font(.title2)
+                            .bold()
+                            .foregroundColor(Color("ColorRedDark"))
+                            .offset(x: 20)
+                        
+                        //Capsula que cresce ao arrastar
+                        HStack {
+                            Capsule()
+                                .fill(Color("ColorRed"))
+                                .frame(width: buttonOffset + buttonHeight)
+                            
+                            Spacer()
+                        }
+                        
+                        //Base do botão a arrastar
+                        HStack {
+                            ZStack {
+                                Circle()
+                                    .fill(Color("ColorRed"))
+                                
+                                //Bordinha do botão
+                                Circle()
+                                    .fill(Color("ColorRedDark"))
+                                    .padding(8)
+                                
+                                Image(systemName: "chevron.right.2")
+                                    .font(.system(size:24))
+                                    .bold()
+                                    .foregroundColor(.white)
+                            }
+                            
+                            Spacer()
+                        }
+                        .offset(x: buttonOffset)
+                        .gesture(
+                            DragGesture()
+                                .onChanged({ gesture in
+                                    
+                                    //Verificacao limites...
+                                    if gesture.translation.width >= 0  &&
+                                        buttonOffset <= (geometry.size.width - 60) - buttonHeight {
+                                        
+                                        withAnimation(.easeInOut(duration: 0.25)) {
+                                            buttonOffset = gesture.translation.width
+                                        }
+                                    }
+                                })
+                                .onEnded({ _ in
+                                    
+                                    //Verificacao...
+                                    if buttonOffset > (geometry.size.width - 60) / 2 {
+                                        //TODO: Navegar
+                                        
+                                        showSecondScreen = true
+                                    }
+                                    else {
+                                        //Volta pro 0
+                                        withAnimation(.easeInOut(duration: 0.25)) {
+                                            buttonOffset = 0
+                                        }
+                                    }
+                                })
+                        )
+                        
+                        
+                        
+                    }
+                    .frame(width: geometry.size.width - 60,
+                           height: buttonHeight)
+                    .opacity(isAnimating ? 1: 0)
+                    .offset(y: isAnimating ? 0: 100) //De baixo pra cima....
                 }
                 .onAppear {
                     withAnimation(.easeInOut(duration: 1.5)) { //1.5 segundos
                         isAnimating = true
                     }
                 }
+            }
+            .fullScreenCover(isPresented: $showSecondScreen) {
+                ContentView()
             }
         }
     }
